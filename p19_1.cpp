@@ -1,7 +1,6 @@
 // This program builds a binary tree with a 5 nodes.
 #include <iostream>
 #include "IntBinaryTree.h"
-#include <cstddef>
 using namespace std;
 
 int main()

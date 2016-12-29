@@ -1,6 +1,6 @@
 #ifndef INTBINARYTREE_H
 #define INTBINARYTREE_H
-#include <cstddef>
+
 class IntBinaryTree
 {
 
@@ -11,8 +11,8 @@ private:
         int value;
         TreeNode *left;
         TreeNode *right;
-        TreeNode(int value1, TreeNode *left1 = nullptr,
-                 TreeNode *right1 = nullptr) 
+        TreeNode(int value1, TreeNode *left1 =NULL,
+                 TreeNode *right1 = NULL) 
         {
             value = value1;
             left = left1;
@@ -30,7 +30,7 @@ private:
     void displayPostOrder(TreeNode *);
 public:
     IntBinaryTree() //Constructor
-    { root = nullptr; }
+    { root = NULL; }
     ~IntBinaryTree()
     { destroySubtree(root); }
     void insert(int num)
