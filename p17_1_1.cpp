@@ -9,6 +9,18 @@ struct ListNode
     ListNode *next;
 };
 
+void Insert(ListNode *head, int data)
+{
+    //create a new temporary dynamically allocated node
+    ListNode *temp = new ListNode;
+    temp->value = data;
+    temp->next = NULL;
+
+    //connect temp to head
+    head->next = temp;
+    
+}//end of insert
+
 int main()
 {
 
@@ -45,5 +57,17 @@ int main()
     cout << "First item is " << thirdPtr->value << endl;
     cout << "Second item is " << thirdPtr->next->value << endl;
     cout << "Third item is " << thirdPtr->next->next->value << endl;    
+    //-----------------------------------------------------------
+    //Here on out function try out
+    //-----------------------------------------------------------
+    ListNode *newHead = new ListNode;
+    newHead->value = 55;
+    newHead->next = NULL;
+        
+    Insert(newHead, 56);
+
+    cout << "What is in new head? " << newHead->value << endl;
+    cout << "what is after that? " << newHead->next->value << endl;    
+
     return 0;
 }//end of main
